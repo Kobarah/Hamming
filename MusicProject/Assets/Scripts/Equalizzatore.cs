@@ -30,6 +30,7 @@ public class Equalizzatore : MonoBehaviour {
 	public GameObject[] cubesV;
 	public float numberOfObjects;
 	public int hight = 30;
+	public Material prova;
 
 	void Awake()
 	{
@@ -111,7 +112,12 @@ public class Equalizzatore : MonoBehaviour {
 
 			for (int i = 0; i < gridX; i++)
 			{
-				
+				if (i == 5) 
+				{
+
+					prova.SetTextureOffset("_MainTex", new Vector2(spectrum [i]*15,-1.04f));
+
+				}
 				Vector3 previousScale = vettore [i+j].transform.localScale;
 				previousScale.y = Mathf.Lerp (previousScale.y, spectrum [i] * hight, Time.deltaTime * 30);
 				//previousScale.z = Mathf.Lerp (previousScale.z, spectrum [i] * hight, Time.deltaTime * 30);
