@@ -5,7 +5,7 @@ using UnityEngine;
 public class Equalizzatore : MonoBehaviour {
 
 
-	/*public GameObject prefab;
+	public GameObject prefab;
 	public int numberOfObjects = 20;
 	public float radius = 5f;
 	public GameObject[] cubes;
@@ -14,22 +14,22 @@ public class Equalizzatore : MonoBehaviour {
 	void Start() {
 		for (int i = 0; i < numberOfObjects; i++) {
 			float angle = i * Mathf.PI * 2 / numberOfObjects;
-			Vector3 pos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+			Vector3 pos = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1.58f) * radius;
 			Instantiate(prefab, pos, Quaternion.identity);
 		}
 
 		cubes = GameObject.FindGameObjectsWithTag ("cubes");
 
-	}*/
+	}
 
-	public GameObject prefab;
+	//public GameObject prefab;
 	public int gridX = 5;
 	public int gridY = 5;
 	public int spacing = 2;
 	public GameObject[,] cubesM;
 	public GameObject[] cubesV;
-	public float numberOfObjects;
-	public int hight = 30;
+	//public float numberOfObjects;
+	//public int hight = 30;
 	public Material prova;
 
 	void Awake()
@@ -39,7 +39,7 @@ public class Equalizzatore : MonoBehaviour {
 
 	}
 
-	void Start() 
+/*	void Start() 
 	{
 
 		//istanziamo gli oggetti a matrice nella scena
@@ -52,12 +52,12 @@ public class Equalizzatore : MonoBehaviour {
 				Instantiate(prefab, pos, Quaternion.identity);
 
 			}
-		}
+		}/*
 
 
 		numberOfObjects = gridX * gridY;
 
-		for (int y = 0; y < gridY; y++) 
+		/*for (int y = 0; y < gridY; y++) 
 		{
 
 			for (int x = 0; x < gridX; x++) 
@@ -68,17 +68,17 @@ public class Equalizzatore : MonoBehaviour {
 
 			}
 
-		}
+		}*/
 
-		cubesV = GameObject.FindGameObjectsWithTag ("cubes");
+		//cubesV = GameObject.FindGameObjectsWithTag ("cubes");
 
-	} 
+	//} 
 
 	void Update()
 	{
 
 
-		ModificaCubiVettore (cubesV);
+		//ModificaCubiVettore (cubesV);
 
 		/*
 		float[] spectrum = AudioListener.GetSpectrumData (1024, 0, FFTWindow.Hamming);
